@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.21)
 
 set( RAKNET_INTERNAL_INCLUDE_DIRS 
 	${RakNet_SOURCE_DIR}/Source 
@@ -8,9 +8,10 @@ set( RAKNET_INTERNAL_INCLUDE_DIRS
 
 if( RAKNET_ENABLE_STATIC )
 	add_subdirectory(LibStatic)
-endif()
+# endif()
 
+else()
 
-if( RAKNET_ENABLE_DLL )
+# if( RAKNET_ENABLE_DLL )
 	add_subdirectory(DLL)
 endif()
